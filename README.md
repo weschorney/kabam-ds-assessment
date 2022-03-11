@@ -16,7 +16,7 @@ We are given data in three formats: `.csv`, `.parquet`, and `.db`. The `pandas` 
 
 Because the amount of NaN values is so small compared to the size of our data, we drop them. Next, we look at the amount of converted users and note that this is an imbalanced classification problem. We also look at those users who have completed the tutorial, and are relieved that we have a sufficient amount of data. Finally, we turn our attention to keeping or dropping columns. Since we have a limited amount of time with the assessment, we take a somewhat naïve approach, where we look at the distributions of converted versus non-converted users for each column, and keep those columns where they look sufficiently different. This produces figures such as:
 
-[alt](./figures/distribution.png)
+![alt](./figures/distribution.png)
 
 For some categorical columns, we also reduce the number of unique entries in them, by keeping the most popular entries, and grouping all less popular entries together (since we will have to one-hot encode some of the columns, we want to reduce the width of our data as much as possible).
 
